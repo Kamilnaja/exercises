@@ -18,4 +18,21 @@ Now we want subscribe to those two observables, and return first obsFirst$ value
 
 ## 2
 
+Create observable from given array:
 
+```js
+['lorem', 'ipsum', 'dolor']
+```
+but first returned value should be "veni" and last - "vici"
+
+expected result
+
+veni 
+
+lorem
+
+ipsum
+
+dolor
+
+vici 
