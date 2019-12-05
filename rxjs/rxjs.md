@@ -77,3 +77,18 @@ d
 e
 g 
 ```
+
+## 5 
+
+Create one http request. When is done, create second http request. 
+You can mock http request like this:
+```
+const reqFirst$ = of('hello').pipe(delay(3000));
+const reqSecond$ = of('world').pipe(delay(500));
+```
+Print also timestamp for every request.
+
+## 6
+
+This is the same like 5, but you don't need wait for first request. Just run two request and don't worry about order.
+
