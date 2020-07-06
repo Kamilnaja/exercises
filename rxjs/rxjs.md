@@ -13,7 +13,7 @@ const obs$ = of('hello')
   )
   .subscribe(item => console.log(item));
 ```
-
+Please remember to unsubscribe from streams. 
 
 ## 1 *
 Create two observables$ with timer. 
@@ -92,3 +92,16 @@ Print also timestamp for every request.
 
 This is the same like 5, but you don't need wait for first request. Just run two request and don't worry about order.
 
+## 7
+So you have observable stream of booleans like this 
+```
+[true, false, true, false]
+```
+Please make some action in your code, when at some point of time, value from observable is true. Make sure, that you takes only first value and that your stream will not receive values forever. You can imagine, that this stream is service value, that get give you some information and you must use this information for make proper action.
+
+## 8 
+Setup is the same like in 7, but you have two streams. For example, first is information that you are in readonly mode, and second, that you can edit or not.
+```
+canEdit$ = [true, false, false, true];
+```
+If first stream gives value false, and second stream gives you value of true, please log info - 'you can edit'.
